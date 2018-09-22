@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+:root {
+    /*
+    set de color pedofule (original)
+    --main-bgcolor: #4b379a;
+    --enfasis-color1: #3224b0;
+    --enfasis-color2: #be5ede;
+    --shadow: 3b278a;
+    --vaper-text: #9c9c9c;
+    --wt-color: #fff;
+    --dr-color: #000;
+    */
+    /*nuevo set de color personalizado*/
+    --main-bgcolor: #4b379a;
+    --enfasis-color1: #202020;
+    --enfasis-color2: #09268f;
+    --shadow: #15152f;
+    --vaper-text: #5c5c5c;
+    --wt-color: #2050d8;
+    --dr-color: #fff;
+    line-height: 1.45em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--main-bgcolor);
+}
+
+.algo {
+    margin: 5em auto;
+    width: 85%;
+    color: #fff;
+    box-shadow: 5px 4px 8px var(--shadow);
+    max-width: 90%;
+}
+
+.panel {
+    position: relative;
+}
+
+.panel::before {
+    content: " ";
+    position: absolute;
+    background: url(../img/header-bg.jpg) no-repeat;
+    /* idea de nestor usar position top para arreglar la imagen de samus y que no solo se vea el pecho*/
+    background-position: top;
+    background-size: cover;
+    z-index: -2;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.panel::after {
+    content: " ";
+    position: absolute;
+    background-image: linear-gradient(90deg, var(--enfasis-color1) 25%, var(--enfasis-color2) 80%);
+    opacity: 0.55;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.subalgo {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2em;
+    align-items: center;
+
+}
+
+.subalgo > * {
+    padding: 0.1em;
+    margin: 0.6em;
+}
+
+.subalgo p {
+    font-size: 1.5em;
+}
+
+.subalgo h1 {
+    font-size: 4em;
+}
+
+.barra {
+    margin-bottom: 2em;
+    display: flex;
+    width: 100%;
+    margin: 1em;
+    padding: 6em;
+    justify-content: space-between;
+}
+
+.barra nav {
+    display: inline-block;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+}
+
+.barra span {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1.1em;
+    font-size: 1.2em;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+.corete {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+  }
+
+
+.corete:hover .overlay {
+    opacity: 0;
+    background-color: #be5ede;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+.roundbut {
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 2em;
+    line-height: 2em;
+    margin: 1em;
+    padding: 0.1em 1.8em;
+    border-width: 2px;
+    border-style: solid;
+    transition: all 0.5s ease;
+}
+
+.wite {
+    color: var(--wt-color);
+    border-color: var(--wt-color);
+}
+
+.dark {
+    color: #000;
+    border-color: #000;
+}
+
+.wite:hover {
+    background: linear-gradient(90deg, var(--enfasis-color1) 0%, var(--enfasis-color2) 100%) no-repeat;
+    padding: 0.1em 2em;
+    border-color: transparent;
+
+}
+
+.dark:hover {
+    color: var(--dr-color);
+    background: linear-gradient(90deg, var(--enfasis-color1) 0%, var(--enfasis-color2) 100%) no-repeat;
+    padding: 0.1em 2em;
+    border-color: transparent;
+
+}
+
+.subalgo2 {
+    background-color: #fff;
+    color: var(--vaper-text);
+    padding-top: 2.5em;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    position: relative;
+    align-items: center;
+    align-content: space-around;
+    
+}
+
+.subalgo2 strong {
+    color: #000;
+}
+.head1{
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+.subalgo2 h2 {
+    font-size: 2.09em;
+    line-height: 1.1;
+}
+
+.subalgo2 .casualidad {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    width: 65%;
+}
+
+.subalgo2 .casualidad > * {
+    padding: 0.5em 1.5em;
+}
+
+.subalgo2 .portrait {
+    padding: 0.5em;
+}
+
+.subalgo2 .portrait img {
+    display: block;
+    margin: 1em auto;
+    width: 80%;
+    height: 80%;
+    border-radius: 8px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+}
+
+.portrait img{
+    clip: rect(0px,150px,500px,0px);
+}
+
+.trans {
+    background-color: transparent;
+}
+
+.subalgo2.right {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.subalgo2.right .casualidad {
+    width: 50%;
+    padding-top: 1em;
+}
+
+.parrafomobil {
+    background-image: url(../img/parallux-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scale(1,1.04);
+    z-index: -6;
+    padding-bottom: 2em;
+    overflow: hidden;
+}
+
+.sqre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+    padding: 1em;
+    background-color: #fff;
+}
+
+
+
+.sqre .card .contenimg {
+    opacity: 0.8;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.sqre .card  img{
+    display: block;
+    margin: 1em auto;
+    width: 80%;
+    height: 80%;
+    border-radius: 8px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+}
